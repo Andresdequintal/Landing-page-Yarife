@@ -1,0 +1,58 @@
+import React from 'react';
+import './Hero.css';
+import yarifeImage from '../../assets/images/Fotos profesionales/1.png';
+import iconBulb from '../../assets/images/Iconos/Recurso 40.png';
+import iconArrow from '../../assets/images/Iconos/Recurso 46.png';
+
+const Hero = () => {
+  const openWhatsApp = () => {
+    const phone = '584242429016';
+    const text = encodeURIComponent('Hola Yarife, quiero reservar una asesoría.');
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+  };
+
+  return (
+    <section id="inicio" className="hero">
+      {/* Iconos decorativos: bombillo y flecha (assets) */}
+      <img src={iconBulb} alt="" className="hero-icon lightbulb-icon" />
+      <img src={iconArrow} alt="" className="hero-icon arrow-icon" />
+
+      {/* Lado izquierdo - Morado */}
+      <div className="hero-left">
+        {/* Patrón de ondas */}
+        <div className="wave-pattern"></div>
+
+        {/* Contenido */}
+        <div className="hero-content">
+          <h1 className="hero-headline">
+            DESATA EL<br />
+            <span className="power">POWER</span><br />
+            DETRÁS<br />
+            DE TUS IDEAS
+          </h1>
+          
+          <p className="hero-description">
+            Transforma tu conocimiento en una marca profesional que educa, conecta y vende.
+          </p>
+          
+          <button onClick={openWhatsApp} className="cta-button">
+            RESERVA TU ASESORÍA
+          </button>
+        </div>
+      </div>
+      
+      {/* Lado derecho - Naranja */}
+      <div className="hero-right">
+        {/* Círculo de fondo */}
+        <div className="circle-bg"></div>
+        
+        {/* Imagen de la persona */}
+        <div className="person-image">
+          <img src={yarifeImage} alt="Yarife Vallenilla" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero; 

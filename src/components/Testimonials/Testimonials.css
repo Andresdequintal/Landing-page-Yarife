@@ -1,0 +1,397 @@
+.testimonials-section {
+  background: var(--morado);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cuarto de círculo en esquina superior derecha */
+.quarter-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+
+/* Círculo amarillo con logo en esquina derecha superior */
+.logo-circle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 140px;
+  height: 140px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 6px 24px rgba(242, 173, 0, 0.4);
+}
+
+.logo-inside-circle {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* Círculos decorativos grandes */
+.decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.decor-circle--top-left {
+  top: -60px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background: #d6a3fb;
+  opacity: 0.2;
+}
+
+.decor-circle--mid-right {
+  top: 100px;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  background: #d6a3fb;
+  opacity: 0.2;
+}
+
+/* Círculos decorativos pequeños */
+.decor-circle--bottom-left {
+  bottom: 30px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+.decor-circle--bottom-right {
+  bottom: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background: #d6a3fb;
+  opacity: 0.5;
+}
+
+/* Iconos decorativos */
+.t-decor {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+
+.t-decor--lightbulb {
+  top: 80px;
+  left: 100px;
+  transform: rotate(-15deg);
+  width: 100px;
+  height: 100px;
+}
+
+.t-decor--flower {
+  bottom: 100px;
+  left: 20px;
+  transform: rotate(-15deg);
+  width: 80px;
+  height: 80px;
+}
+
+/* Asteriscos amarillos */
+.yellow-asterisk {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  z-index: 2;
+}
+
+.yellow-asterisk--branding {
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.yellow-asterisk--taller {
+  bottom: 160px;
+  left: 100px;
+}
+
+.yellow-asterisk--asesorias {
+  bottom: 160px;
+  right: 100px;
+}
+
+.t-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.t-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.t-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--blanco);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.t-bulb {
+  font-size: 0.8em;
+  color: var(--accent);
+}
+
+.t-script {
+  font-style: italic;
+  font-size: 0.9em;
+  position: relative;
+}
+
+.t-script::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  right: -20px;
+  bottom: -10px;
+  border: 2px dashed var(--blanco);
+  border-radius: 50px;
+  opacity: 0.7;
+}
+
+.t-hand {
+  font-size: 0.8em;
+  color: var(--accent);
+}
+
+.t-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.t-col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+
+/* Columna izquierda - Taller */
+.t-col--left {
+  justify-self: start;
+}
+
+/* Columna central - Branding (posición más alta) */
+.t-col--center {
+  justify-self: center;
+  margin-top: -30px;
+}
+
+/* Columna derecha - Asesorías */
+.t-col--right {
+  justify-self: end;
+}
+
+.t-pill {
+  padding: 6px 14px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  white-space: nowrap;
+}
+
+.t-pill--taller {
+  background: var(--accent);
+  color: var(--negro);
+}
+
+.t-pill--branding {
+  background: #8c5bff;
+  color: var(--blanco);
+}
+
+.t-pill--asesorias {
+  background: var(--accent);
+  color: var(--negro);
+}
+
+.t-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  position: relative;
+  border: 2px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.t-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+}
+
+/* Rotaciones específicas para cada card */
+.t-card--taller-1 { transform: rotate(-2.5deg); }
+.t-card--taller-2 { transform: rotate(2deg); }
+
+.t-card--branding-1 { transform: rotate(-1.5deg); }
+.t-card--branding-2 { transform: rotate(3deg); }
+
+.t-card--asesorias-1 { transform: rotate(-3deg); }
+.t-card--asesorias-2 { transform: rotate(1.5deg); }
+
+.t-card--taller-1:hover { transform: rotate(-2.5deg) translateY(-5px); }
+.t-card--taller-2:hover { transform: rotate(2deg) translateY(-5px); }
+
+.t-card--branding-1:hover { transform: rotate(-1.5deg) translateY(-5px); }
+.t-card--branding-2:hover { transform: rotate(3deg) translateY(-5px); }
+
+.t-card--asesorias-1:hover { transform: rotate(-3deg) translateY(-5px); }
+.t-card--asesorias-2:hover { transform: rotate(1.5deg) translateY(-5px); }
+
+.t-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.t-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.t-info {
+  flex: 1;
+}
+
+.t-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--negro);
+  margin: 0 0 3px 0;
+}
+
+.t-sub {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.t-text {
+  font-size: 0.9rem;
+  color: var(--negro);
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .t-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .t-col--center {
+    margin-top: 0;
+  }
+  
+  .t-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 0;
+  }
+  
+  .t-container {
+    padding: 0 16px;
+  }
+  
+  .t-grid {
+    gap: 20px;
+  }
+  
+  .t-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .quarter-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .logo-circle {
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .logo-inside-circle {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .decor-circle--top-left {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .decor-circle--mid-right {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .t-decor {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .yellow-asterisk {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+

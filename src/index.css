@@ -1,0 +1,56 @@
+/* Variables CSS globales */
+:root {
+  /* Design tokens */
+  --primary: #6A0DAD;        /* morado principal */
+  --accent: #F2AD00;         /* amarillo CTA */
+  --lavender: #D6A3FB;       /* lila claro */
+  --black: #000000;
+  --white: #FFFFFF;
+
+  /* Compatibilidad con variables usadas */
+  --morado: #6e27e1;         /* hero solicitado */
+  --morado-acento: #6a0dad;  /* acento texto */
+  --rojo: var(--accent);
+  --lila: var(--lavender);
+  --negro: var(--black);
+  --blanco: var(--white);
+  --gris-claro: #f8f9fa;
+  --gris-medio: #6c757d;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: var(--negro);
+  background-color: var(--blanco);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos para enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilos para listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Estilos para imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+} 

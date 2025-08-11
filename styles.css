@@ -1,0 +1,500 @@
+/* Reset y variables de color */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --morado: #6A0DAD;
+    --rojo: #F2AD00;
+    --lila: #D6A3FB;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --gris-claro: #f8f9fa;
+    --gris-medio: #6c757d;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    color: var(--negro);
+    background-color: var(--blanco);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Amanda Rose', cursive;
+}
+
+.logo .lightning {
+    color: var(--rojo);
+    font-size: 1.5rem;
+}
+
+.menu-toggle {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Hero Section - Split Layout */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.hero-left {
+    background: var(--morado);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-right {
+    background: var(--rojo);
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Wave patterns */
+.wave-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: var(--lila);
+    border-radius: 50% 50% 0 0;
+    opacity: 0.3;
+}
+
+/* Hero Content */
+.hero-content {
+    color: var(--blanco);
+    z-index: 2;
+    position: relative;
+}
+
+.hero-headline {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.hero-headline .power {
+    color: var(--rojo);
+    font-size: 5rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--rojo);
+    color: var(--blanco);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Icons */
+.hero-icon {
+    position: absolute;
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.lightbulb-icon {
+    top: 30%;
+    left: 10%;
+}
+
+.arrow-icon {
+    bottom: 30%;
+    left: 15%;
+    transform: rotate(45deg);
+}
+
+/* Person Image */
+.person-image {
+    width: 80%;
+    height: 80%;
+    background: url('placeholder-person.jpg') center/cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--rojo);
+    border-radius: 50%;
+    top: 20%;
+    right: -50px;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Nueva sección Sobre Mí */
+.about-new {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-new-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.about-left {
+    background: var(--blanco);
+    width: 60%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--morado);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.about-description {
+    font-size: 1.3rem;
+    color: var(--negro);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.credentials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.credential-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: var(--negro);
+}
+
+.credential-icon {
+    color: var(--rojo);
+    font-size: 1.2rem;
+}
+
+.about-right {
+    background: var(--morado);
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.decorative-element {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    object-fit: contain;
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--morado);
+}
+
+/* About Section */
+.about {
+    background-color: var(--gris-claro);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h3 {
+    color: var(--morado);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.credentials {
+    background: var(--morado);
+    color: var(--blanco);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.credentials h4 {
+    color: var(--rojo);
+    margin-bottom: 1rem;
+}
+
+.credentials ul {
+    list-style: none;
+}
+
+.credentials li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.credentials li:before {
+    content: "✓";
+    color: var(--rojo);
+    position: absolute;
+    left: 0;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--blanco);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--lila);
+}
+
+.service-card h3 {
+    color: var(--morado);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-card .price {
+    color: var(--rojo);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.service-card .description {
+    margin-bottom: 1.5rem;
+}
+
+.service-cta {
+    background: var(--morado);
+    color: var(--blanco);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.service-cta:hover {
+    background: var(--rojo);
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, var(--morado), var(--lila));
+    color: var(--blanco);
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-item {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--rojo);
+    margin-bottom: 1rem;
+}
+
+.contact-item a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--rojo);
+}
+
+/* Footer */
+.footer {
+    background: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--rojo);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+    
+    .hero-headline .power {
+        font-size: 3rem;
+    }
+    
+    .hero-left {
+        padding: 0 2rem;
+    }
+    
+    .about-new-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .about-left,
+    .about-right {
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .about-left {
+        padding: 2rem;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap'); 
