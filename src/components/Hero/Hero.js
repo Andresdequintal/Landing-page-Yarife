@@ -1,8 +1,8 @@
 import React from 'react';
-import './Hero.css';
 import yarifeImage from '../../assets/images/Fotos profesionales/1.png';
 import iconBulb from '../../assets/images/Iconos/Recurso 40.png';
 import iconArrow from '../../assets/images/Iconos/Recurso 46.png';
+import './Hero.css';
 
 const Hero = () => {
   const openWhatsApp = () => {
@@ -13,9 +13,7 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="hero">
-      {/* Iconos decorativos: bombillo y flecha (assets) */}
-      <img src={iconBulb} alt="" className="hero-icon lightbulb-icon" />
-      <img src={iconArrow} alt="" className="hero-icon arrow-icon" />
+     
 
       {/* Lado izquierdo - Morado */}
       <div className="hero-left">
@@ -40,16 +38,24 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      
+        {/* Círculo de fondo */}
+      <div className="circle-bg">
+         {/* Iconos decorativos: bombillo y flecha (assets) */}
+        <img src={iconBulb} alt="" className="hero-icon lightbulb-icon" />
+        <img src={iconArrow} alt="" className="hero-icon arrow-icon" />
+        {/* Imagen de la persona */}
+        <img className="person-image" src={yarifeImage} alt="Yarife Vallenilla" />
+        {/* Círculo pequeño */}
+        <div className="circle-bg circle-bg-small"></div>
+      </div>
       {/* Lado derecho - Naranja */}
       <div className="hero-right">
-        {/* Círculo de fondo */}
-        <div className="circle-bg"></div>
         
-        {/* Imagen de la persona */}
-        <div className="person-image">
-          <img src={yarifeImage} alt="Yarife Vallenilla" />
-        </div>
+        
+        
+        {/* <div className="person-image">
+          
+        </div> */}
       </div>
     </section>
   );
