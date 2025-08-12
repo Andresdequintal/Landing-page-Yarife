@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
 import './FAQ.css';
+import logoYarife from '../../assets/images/Logos/Recurso 38.png';
+import icon1 from '../../assets/images/Iconos/Recurso 40.png';
+import icon2 from '../../assets/images/Iconos/Recurso 42.png';
+import icon3 from '../../assets/images/Iconos/Recurso 50.png';
+import icon4 from '../../assets/images/Iconos/Recurso 67.png';
+import icon5 from '../../assets/images/Iconos/Recurso 68.png';
+import icon6 from '../../assets/images/Iconos/Recurso 69.png';
+import icon7 from '../../assets/images/Iconos/Recurso 70.png';
+import icon8 from '../../assets/images/Iconos/Recurso 71.png';
+import icon9 from '../../assets/images/Iconos/Recurso 72.png';
+import icon10 from '../../assets/images/Iconos/Recurso 73.png';
 
 const FAQ = () => {
-  const [openQuestions, setOpenQuestions] = useState([0, 1, 2, 3]);
+  const [openQuestions, setOpenQuestions] = useState([]);
 
   const toggleQuestion = (index) => {
     if (openQuestions.includes(index)) {
@@ -52,14 +63,28 @@ const FAQ = () => {
                 <span></span>
               </div>
             </div>
-            <span className="faq-brand-text">YARIFE</span>
+            <img src={logoYarife} alt="Yarife" className="faq-logo" />
           </div>
         </div>
 
-        {/* Elementos decorativos */}
+        {/* Elementos decorativos principales */}
         <div className="faq-decor">
           <div className="faq-quote-icon">"</div>
           <div className="faq-arrow-icon">✓</div>
+        </div>
+
+        {/* Elementos decorativos adicionales con iconos */}
+        <div className="faq-decor-icons">
+          <img src={icon1} alt="" className="faq-decor-icon faq-decor-icon--1" />
+          <img src={icon2} alt="" className="faq-decor-icon faq-decor-icon--2" />
+          <img src={icon3} alt="" className="faq-decor-icon faq-decor-icon--3" />
+          <img src={icon4} alt="" className="faq-decor-icon faq-decor-icon--4" />
+          <img src={icon5} alt="" className="faq-decor-icon faq-decor-icon--5" />
+          <img src={icon6} alt="" className="faq-decor-icon faq-decor-icon--6" />
+          <img src={icon7} alt="" className="faq-decor-icon faq-decor-icon--7" />
+          <img src={icon8} alt="" className="faq-decor-icon faq-decor-icon--8" />
+          <img src={icon9} alt="" className="faq-decor-icon faq-decor-icon--9" />
+          <img src={icon10} alt="" className="faq-decor-icon faq-decor-icon--10" />
         </div>
 
         {/* Preguntas y respuestas */}
@@ -75,11 +100,11 @@ const FAQ = () => {
                   {openQuestions.includes(index) ? '−' : '+'}
                 </span>
               </div>
-              {openQuestions.includes(index) && (
+              <div className={`faq-answer-container ${openQuestions.includes(index) ? 'faq-answer-open' : ''}`}>
                 <div className="faq-answer">
                   {item.answer}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
