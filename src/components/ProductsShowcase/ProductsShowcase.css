@@ -113,25 +113,16 @@
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.play-button {
-  background: #dc3545;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+.youtube-thumbnail:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
 }
+
+
 
 .canva-logo {
   position: absolute;

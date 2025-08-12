@@ -45,7 +45,6 @@ const ProductsShowcase = () => {
                         className="youtube-thumbnail"
                         onClick={handleVideoClick}
                       />
-                      <div className="play-button" onClick={handleVideoClick}>▶</div>
                       <div className="canva-logo">Canva</div>
                     </>
                   ) : (
