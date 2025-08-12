@@ -1,6 +1,10 @@
 import React from 'react';
 import './Services.css';
 import centerCharacter from '../../assets/images/Iconos/image (1).png';
+import iconBulb from '../../assets/images/Iconos/Recurso 40.png';
+import iconBriefcase from '../../assets/images/Iconos/Recurso 41.png';
+import iconHand from '../../assets/images/Iconos/Recurso 42.png';
+import iconPerson from '../../assets/images/Iconos/Recurso 43.png';
 
 const Services = () => {
   const services = [
@@ -88,11 +92,17 @@ const Services = () => {
         </div>
         <div className="services-layout">
           <div className="services-left">
-            <div className="service-pill">BRANDING</div>
+            <div className="label-pill">
+              <img src={iconHand} alt="Branding icon" className="label-icon" />
+              <span>BRANDING</span>
+            </div>
             <div className="service-card soft">
               <p>Crea una marca con <strong>identidad</strong> y <strong>propósito</strong></p>
             </div>
-            <div className="service-pill secondary">COMUNICAR</div>
+            <div className="label-pill">
+              <img src={iconPerson} alt="Comunicar icon" className="label-icon" />
+              <span>COMUNICAR</span>
+            </div>
             <div className="service-card soft">
               <p>Estrategia de contenido <strong>visual</strong> y <strong>educativo</strong></p>
               <p>Crear piezas coherentes y <strong>estratégicas</strong></p>
@@ -110,12 +120,18 @@ const Services = () => {
           </div>
 
           <div className="services-right">
-            <div className="service-pill right">CLARIDAD</div>
+            <div className="label-pill right">
+              <img src={iconBulb} alt="Claridad icon" className="label-icon" />
+              <span>CLARIDAD</span>
+            </div>
             <div className="service-card soft">
               <p>Asesorías creativas para <strong>desbloquear</strong> tu idea</p>
               <p>Convertir ideas en <strong>planes de acción</strong> y MVP</p>
             </div>
-            <div className="service-pill right secondary">VENDER</div>
+            <div className="label-pill right">
+              <img src={iconBriefcase} alt="Vender icon" className="label-icon" />
+              <span>VENDER</span>
+            </div>
             <div className="service-card soft">
               <p>Diseño de recursos digitales (<strong>ebooks</strong>, <strong>guías</strong>)</p>
               <p>Productos listos para <strong>vender</strong> y <strong>escalar</strong></p>
