@@ -73,7 +73,7 @@
   padding: 18px;
 }
 
-.services-center { text-align: center; }
+.services-center { text-align: center; position: relative; }
 .center-character { width: 260px; height: auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,0.15)); }
 .quiero {
   color: var(--morado);
@@ -81,12 +81,16 @@
   font-size: 3.2rem;
   transform: rotate(-10deg);
   margin-bottom: -20px;
+  font-style: monospace;
 }
 .arrows { position: relative; height: 0; }
-.arrow { position: absolute; color: var(--morado); font-size: 3rem; opacity: 0.25; }
-.a1 { top: -40px; right: 40px; }
-.a2 { top: 10px; right: -20px; }
-.a3 { top: 10px; left: -20px; transform: rotate(180deg); }
+
+/* Flechas como imágenes */
+.arrow-img { position: absolute; opacity: 1; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.12)); }
+.arrow-tl { top: -215px; left: -85px; width: 160px; transform: rotate(-6deg); }
+.arrow-tr { top: -120px; right: 220px; width: 110px; transform: rotate(8deg); }
+.arrow-br { bottom: -30px; right: -35px; width: 130px; transform: rotate(-12deg); z-index: -1; }
+.arrow-bl { bottom: 100px; left: 180px; width: 150px; transform: rotate(18deg); }
 
 .service-card {
   background: var(--blanco);
@@ -146,6 +150,13 @@
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .arrow-tl { left: -60px; width: 110px; }
+  .arrow-tr { right: -60px; width: 120px; }
+  .arrow-br { right: -20px; width: 120px; }
+  .arrow-bl { left: -50px; width: 120px; }
+}
+
 @media (max-width: 768px) {
   .services-layout { grid-template-columns: 1fr; }
   .label-pill.right { justify-self: start; }
@@ -158,4 +169,5 @@
     padding: 1.5rem;
   }
   .center-character { width: 220px; }
+  .arrow-img { display: none; }
 } 

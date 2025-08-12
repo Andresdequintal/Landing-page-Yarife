@@ -5,6 +5,10 @@ import iconBulb from '../../assets/images/Iconos/Recurso 40.png';
 import iconBriefcase from '../../assets/images/Iconos/Recurso 41.png';
 import iconHand from '../../assets/images/Iconos/Recurso 42.png';
 import iconPerson from '../../assets/images/Iconos/Recurso 43.png';
+import arrow45 from '../../assets/images/Iconos/Recurso 45.png';
+import arrow46 from '../../assets/images/Iconos/Recurso 46.png';
+import arrow47 from '../../assets/images/Iconos/Recurso 47.png';
+import arrow48 from '../../assets/images/Iconos/Recurso 48.png';
 
 const Services = () => {
   const services = [
@@ -113,9 +117,10 @@ const Services = () => {
             <div className="quiero">¿Quiero?</div>
             <img src={centerCharacter} alt="Quiero" className="center-character" />
             <div className="arrows">
-              <span className="arrow a1">↗</span>
-              <span className="arrow a2">↘</span>
-              <span className="arrow a3">↙</span>
+              <img src={arrow45} alt="arrow" className="arrow-img arrow-tl" />
+              <img src={arrow46} alt="arrow" className="arrow-img arrow-tr" />
+              <img src={arrow47} alt="arrow" className="arrow-img arrow-br" />
+              <img src={arrow48} alt="arrow" className="arrow-img arrow-bl" />
             </div>
           </div>
 
