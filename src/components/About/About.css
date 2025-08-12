@@ -1,9 +1,9 @@
 .about-section {
   background: linear-gradient(90deg, #a86df4 0%, #d6a3fb 100%);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: stretch;
-  padding: 80px 0; /* espacio bajo el header fijo */
+  /* padding: 80px 0; espacio bajo el header fijo */
 }
 
 .about-grid {
@@ -12,7 +12,7 @@
   gap: 40px;
   width: 100%;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
   padding: 0 40px;
 }
 
@@ -21,6 +21,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-direction: column;
   padding-top: 0;
 }
 
@@ -31,6 +32,8 @@
   line-height: 1.05;
   letter-spacing: -0.5px;
   margin-bottom: 8px;
+  position: relative; 
+  transform: translateY(35px);
 }
 
 .headline-line { display: block; }
@@ -50,33 +53,35 @@
 .bg-bulb {
   position: absolute;
   left: 70px;
-  top: 200px;
-  width: 120px;
+  bottom: 0;
+  width: 100px;
   opacity: 1;
   z-index: 1;
+  transform: translateY(120%) rotate(-25deg);
 }
 
 .bg-briefcase {
   position: absolute;
-  left: 470px;
-  bottom: 400px;
-  width: 110px;
+  right: 0;
+  bottom: 50%;
+  width: 100px;
   opacity: 1;
   z-index: 1;
+  transform: translateX(100%) rotate(25deg);
 }
 
-.about-person {
+/* .about-person {
   position: absolute;
   left: 140px;
   bottom: -87px;
   width: 420px;
   max-width: 90%;
   z-index: 2;
-}
+} */
 
-.about-person img { width: 100%; height: auto; object-fit: contain; }
+.about-person { height: 600px; margin-top: -20px; z-index: 2; align-self: center; }
 
-.about-right { color: #ffffff; padding: 20px 20px 20px 0; }
+.about-right { color: #ffffff; padding: 20px; margin: auto; }
 
 .quote {
   font-size: 1.7rem;
@@ -92,13 +97,15 @@
   margin-bottom: 10px;
 }
 
-.accent { color: var(--morado-acento); }
+.accent { 
+  color: var(--morado-acento) !important; 
+}
 
 .about-list { margin-top: 24px; display: grid; gap: 16px; }
 
-.about-list-item { display: flex; align-items: center; gap: 12px; font-size: 1.05rem; }
+.about-list-item {  display: flex; align-items: center; gap: 12px; font-size: 1.05rem; }
 
-.about-list-icon { color: #ffffff; font-size: 1.15rem; }
+.about-list-icon {  font-size: 1.25rem; }
 
 /* Responsive */
 @media (max-width: 1200px) {

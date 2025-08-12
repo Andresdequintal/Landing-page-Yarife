@@ -1,8 +1,8 @@
 import React from 'react';
-import './About.css';
 import personAbout from '../../assets/images/Fotos profesionales/9.png';
 import iconBulb from '../../assets/images/Iconos/Recurso 40.png';
 import iconBriefcase from '../../assets/images/Iconos/Recurso 41.png';
+import './About.css';
 
 const About = () => {
   return (
@@ -12,19 +12,20 @@ const About = () => {
         <div className="about-left">
           <div className="headline">
             <span className="headline-line">CONECTA CON</span>
-            <span className="headline-line">QUIEN TE GUIA</span>
+            <span className="headline-line">QUIEN TE GUÍA</span>
             <span className="headline-line">
-              CON <span className="white-text">PROPOSITO</span>
+              CON <span className="white-text">PROPÓSITO</span>
             </span>
-          </div>
-
           {/* Iconos de fondo grandes */}
-          <img src={iconBulb} alt="" className="bg-bulb" />
+            <img src={iconBulb} alt="" className="bg-bulb" />
           <img src={iconBriefcase} alt="" className="bg-briefcase" />
-
-          <div className="about-person">
-            <img src={personAbout} alt="Yarife Vallenilla" />
           </div>
+
+          
+
+            <img className="about-person" src={personAbout} alt="Yarife Vallenilla" />
+          {/* <div className="about-person">
+          </div> */}
         </div>
 
         {/* Columna derecha */}
