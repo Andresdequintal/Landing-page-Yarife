@@ -14,10 +14,7 @@ const ProductsShowcase = () => {
 
   return (
     <section id="guaybo" className="guaybo-section">
-      {/* Banner superior */}
-      <div className="strategy-banner">
-        <p>NO ES SOLO DISEÑO, ES ESTRATEGIA QUE <span className="accent">EDUCA, CONECTA Y VENDE</span></p>
-      </div>
+     
 
       <div className="guaybo-container">
         {/* Imágenes decorativas */}
