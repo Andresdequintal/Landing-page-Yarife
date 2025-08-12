@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="hero-content">
           <h1 className="hero-headline">
             DESATA EL<br />
-            <span className="power">POWER</span><br />
+            <span className="power">POWER</span>
             DETRÁS<br />
             DE TUS IDEAS
           </h1>
