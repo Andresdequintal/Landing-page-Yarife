@@ -7,7 +7,8 @@ const ServicesDetails = () => {
     {
       id: 1,
       icon: '🧠',
-      title: 'IDEAR — Asesorías creativas',
+      title: 'IDEAR',
+      subtitle: 'Asesorías creativas',
       price: '$99 plan mensual (4 sesiones) / $30 sesión individual',
       bullets: [
         'Claridad del proyecto y objetivo',
@@ -20,7 +21,8 @@ const ServicesDetails = () => {
     {
       id: 2,
       icon: '🎨',
-      title: 'BRANDEAR — Identidad visual profesional',
+      title: 'BRANDEAR',
+      subtitle: 'Identidad visual profesional',
       price: 'Desde $229',
       bullets: [
         'Marca coherente y profesional',
@@ -32,7 +34,8 @@ const ServicesDetails = () => {
     {
       id: 3,
       icon: '📣',
-      title: 'COMUNICAR — Estrategia y piezas de contenido',
+      title: 'COMUNICAR',
+      subtitle: 'Estrategia y piezas de contenido',
       price: 'Desde $80',
       bullets: [
         'Qué publicar y por qué',
@@ -44,7 +47,8 @@ const ServicesDetails = () => {
     {
       id: 4,
       icon: '📦',
-      title: 'VENDER — Productos digitales',
+      title: 'VENDER',
+      subtitle: 'Productos digitales',
       price: 'Desde $28 por recurso',
       bullets: [
         'Ebooks, guías, presentaciones',
@@ -56,7 +60,8 @@ const ServicesDetails = () => {
     {
       id: 5,
       icon: '🚀',
-      title: 'APRENDER Y CRECER — Talleres, cursos, freebies',
+      title: 'APRENDER Y CRECER',
+      subtitle: 'Talleres, cursos, freebies',
       price: 'Talleres desde $7 · Freebies $0 · Cursos desde $10',
       bullets: [
         'Clases y recursos prácticos',
@@ -79,7 +84,11 @@ const ServicesDetails = () => {
         <div className="services-grid">
           {services.map((service) => (
             <div key={service.id} className="service-card">
-              <h3>{service.icon} {service.title}</h3>
+              <span className='icon'>{service.icon}</span>
+              <h3> {service.title} <br/>
+                <span>{service.subtitle}</span>
+              </h3>
+              <div className='service-card__content'>
               <div className="price">{service.price}</div>
               {service.bullets && (
                 <ul className="bullets">
@@ -91,6 +100,7 @@ const ServicesDetails = () => {
               <button onClick={() => openWhatsApp(`Hola Yarife, ${service.cta}.`)} className="service-cta">
                 {service.cta}
               </button>
+              </div>
             </div>
           ))}
         </div>

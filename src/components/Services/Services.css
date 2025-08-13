@@ -44,12 +44,7 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
 }
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
+
 
 .services-layout {
   display: grid;
@@ -247,14 +242,6 @@
 @media (max-width: 768px) {
   .services-layout { grid-template-columns: 1fr; }
   .label-pill.right { justify-self: start; }
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .service-card {
-    padding: 1.5rem;
-  }
   .center-character { width: 220px; }
   .arrow-img { display: none; }
 } 
