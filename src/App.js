@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
+import img2 from './assets/images/footer2.png';
+import img3 from './assets/images/footer3.png';
 import About from './components/About/About';
-import Contact from './components/Contact/Contact';
 import FAQ from './components/FAQ/FAQ';
-import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import ProductsShowcase from './components/ProductsShowcase/ProductsShowcase';
@@ -24,8 +24,10 @@ function App() {
       <ProductsShowcase />
       <Testimonials />
       <FAQ />
-      <Contact />
-      <Footer />
+      {/* <Contact /> */}
+      <img src={img3}/>
+      <img src={img2}/>
+      {/* <Footer /> */}
     </div>
   );
 }

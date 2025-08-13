@@ -1,4 +1,9 @@
 import React from 'react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import './ServicesDetails.css';
 
 
@@ -79,31 +84,58 @@ const ServicesDetails = () => {
   };
 
   return (
-    <section  className="section">
+    <section className="section">
       <div className="container">
-        <div className="services-grid">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation={true}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          className="services-swiper"
+        >
           {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <span className='icon'>{service.icon}</span>
-              <h3> {service.title} <br/>
-                <span>{service.subtitle}</span>
-              </h3>
-              <div className='service-card__content'>
-              <div className="price">{service.price}</div>
-              {service.bullets && (
-                <ul className="bullets">
-                  {service.bullets.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
-              )}
-              <button onClick={() => openWhatsApp(`Hola Yarife, ${service.cta}.`)} className="service-cta">
-                {service.cta}
-              </button>
+            <SwiperSlide key={service.id}>
+              <div className="service-card">
+                <span className='icon'>{service.icon}</span>
+                <h3> 
+                  {service.title} <br/>
+                  <span>{service.subtitle}</span>
+                </h3>
+                <div className='service-card__content'>
+                  <div className="price">{service.price}</div>
+                  {service.bullets && (
+                    <ul className="bullets">
+                      {service.bullets.map((b, i) => (
+                        <li key={i}>{b}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <button 
+                    onClick={() => openWhatsApp(`Hola Yarife, ${service.cta}.`)} 
+                    className="service-cta"
+                  >
+                    {service.cta}
+                  </button>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );

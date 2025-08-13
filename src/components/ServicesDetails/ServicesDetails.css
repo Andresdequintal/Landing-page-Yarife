@@ -98,14 +98,73 @@
   .arrow-bl { left: -50px; width: 120px; }
 }
 
-@media (max-width: 768px) {
+/* Estilos del carrusel */
+.services-swiper {
+  padding: 60px 0 80px 0; /* Más espacio arriba y abajo para los cards */
+}
 
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+.services-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.services-swiper .swiper-button-next,
+.services-swiper .swiper-button-prev {
+  color: var(--morado);
+  background: rgba(255, 255, 255, 0.9);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.services-swiper .swiper-button-next:after,
+.services-swiper .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.services-swiper .swiper-pagination-bullet {
+  background: var(--morado);
+  opacity: 0.3;
+}
+
+.services-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--morado);
+}
+
+/* Asegurar que las cards mantengan su altura */
+.service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-cta {
+  margin-top: auto;
+}
+
+/* Responsive para el carrusel */
+@media (max-width: 768px) {
+  .services-swiper {
+    padding: 40px 0 60px 0; /* Espacio reducido pero suficiente en móviles */
   }
   
-  .service-card {
-    padding: 1.5rem;
+  .services-swiper .swiper-button-next,
+  .services-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .services-swiper .swiper-button-next:after,
+  .services-swiper .swiper-button-prev:after {
+    font-size: 16px;
   }
 } 

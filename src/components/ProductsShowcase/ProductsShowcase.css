@@ -1,6 +1,6 @@
 .guaybo-section {
   background: #fff;
-  padding: 0;
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
@@ -56,6 +56,7 @@
   gap: 40px;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
 }
 
 .guaybo-card {
@@ -65,6 +66,15 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   border: 1px solid #e9ecef;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20px;
 }
 
 .guaybo-card.course {
@@ -82,17 +92,12 @@
   box-shadow: 0 16px 32px rgba(0,0,0,0.15);
 }
 
-.card-header {
-  margin-bottom: 20px;
-}
+
 
 .card-thumbnail {
   background: #e9ecef;
-  height: 120px;
+  aspect-ratio: 16/9;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   margin-bottom: 12px;
   overflow: hidden;
@@ -155,20 +160,14 @@
 }
 
 .card-title {
-  color: var(--morado);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0 0 16px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
   line-height: 1.4;
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.guaybo-card.course .card-title,
-.guaybo-card.ebook .card-title {
-  color: #fff;
-  font-weight: 900;
+  text-align: start;
 }
 
 .lightbulb-icon {
@@ -187,23 +186,19 @@
   color: #fff;
 }
 
-.card-features p {
-  color: #495057;
+.card-features {
+  color: #fff;
   font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
-}
-
-.guaybo-card.course .card-features p,
-.guaybo-card.ebook .card-features p {
-  color: #fff;
+  text-align: start;
 }
 
 .card-actions {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
 }
 
 .cta {
@@ -244,24 +239,24 @@
 }
 
 .guaybo-decor--top-left {
-  top: 40px;
-  left: 40px;
+  top: -30px;
+  left: -15px;
+  width: 90px;
+  height: auto;
+  transform: rotate(-15deg);
 }
 
 .guaybo-decor--top-right {
-  top: px;
-  right: 40px;
+  top: -10px;
+  right: -10px;
+  transform: translate(100%,-100%) rotate(10deg);
 }
 
 .guaybo-decor--bottom-left {
-  bottom: 40px;
-  left: 0px;
+  bottom: -10px;
+  left: -10px;
   width: 100px;
-  transform: rotate(10deg);
-
-
-
-
+  transform: translate(-100%,100%) rotate(190deg);
 }
 
 .guaybo-decor--bottom-right {

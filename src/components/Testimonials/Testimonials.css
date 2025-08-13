@@ -187,16 +187,15 @@
 .t-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
   align-items: start;
 }
 
 .t-col {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 40px;
   position: relative;
 }
 
