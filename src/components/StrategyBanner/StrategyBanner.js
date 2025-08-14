@@ -8,8 +8,8 @@ const StrategyBanner = () => {
 
   return (
     <div className="strategy-banner">
-    <p>NO ES SOLO DISEÑO, ES ESTRATEGIA QUE <span className="strategy-banner-accent">EDUCA,<br/> CONECTA Y VENDE</span></p>
-  </div>
+      <p>NO ES SOLO DISEÑO, ES ESTRATEGIA QUE <span className="strategy-banner-accent">EDUCA,<br/> CONECTA Y VENDE</span></p>
+    </div>
   );
 };
 

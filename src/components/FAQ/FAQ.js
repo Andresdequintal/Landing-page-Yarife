@@ -24,8 +24,8 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "CUALES SON LOS BENEFICIOS DE TIS SERVICIOS?",
-      answer: "Sí, te ayudo desde la idea hasta el lanzamiento"
+      question: "¿PUEDO TRABAJAR CONTIGO SI AÚN NO TENGO UN CURSO O MATERIAL CREADO?",
+      answer: "Sí. Te ayudo desde la idea hasta el lanzamiento. No necesitas todo claro, ¡justo para eso estoy!"
     },
     {
       question: "¿DISEÑAS LOGOS O MARCAS PARA NEGOCIOS FÍSICOS?",

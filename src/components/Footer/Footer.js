@@ -26,9 +26,9 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className=" flex-container">
+      <div className="flex-container">
         <div className='left-side'>
-          <img src={logo} alt='Yarife'/>
+          <img src={logo} alt='Yarife' />
         </div>
         <div className='right-side'>
         <div className="social-links">

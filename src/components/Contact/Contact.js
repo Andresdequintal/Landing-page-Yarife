@@ -42,7 +42,7 @@ const Contact = () => {
         <div className='contact-container'>
           <div className='contact-container__left'>
             <div className='tag'>Quiero hablar con Yarife
-                <img src={arrow}/>
+                <img src={arrow} alt="Flecha" />
               </div>
             <div className='contacts'>
               <div className='contact'>

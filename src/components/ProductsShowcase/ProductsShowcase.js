@@ -34,15 +34,12 @@ const ProductsShowcase = () => {
               <div className="card-header">
                 <div className="card-thumbnail">
                   {!isVideoPlaying ? (
-                    <>
-                      <img 
-                        src="https://img.youtube.com/vi/Bu0-5FIjJPk/maxresdefault.jpg" 
-                        alt="Curso Canva desde cero" 
-                        className="youtube-thumbnail"
-                        onClick={handleVideoClick}
-                      />
-                      <div className="play-button" onClick={handleVideoClick}>▶</div>
-                    </>
+                    <img 
+                      src="https://img.youtube.com/vi/Bu0-5FIjJPk/maxresdefault.jpg" 
+                      alt="Curso Canva desde cero" 
+                      className="youtube-thumbnail"
+                      onClick={handleVideoClick}
+                    />
                   ) : (
                     <div className="video-container">
                       <iframe
@@ -68,13 +65,12 @@ const ProductsShowcase = () => {
               <div className='card-content'>
 
               <h3 className="card-title">
-                Crea una presentacion con Canva desde cero
-                {/* <span className="lightbulb-icon">💡</span> */}
+                Crea una presentación con Canva desde cero
               </h3>
               
               <div className="card-features">
-                <h4>Caracteristicas:</h4>
-                <p>Aprende a diseñar desde la estructura hasta los elementos graficos</p>
+                <h4>Características:</h4>
+                <p>Aprende a diseñar desde la estructura hasta los elementos gráficos</p>
               </div>
               
               <div className="card-actions">
@@ -99,11 +95,10 @@ const ProductsShowcase = () => {
               <div className='card-content'>
                 <h3 className="card-title">
                   Aprende a diseñar presentaciones efectivas y atractivas
-                  {/* <span className="lightbulb-icon">💡</span> */}
                 </h3>
                 
                 <div className="card-features">
-                  <h4>Caracteristicas:</h4>
+                  <h4>Características:</h4>
                   <p>Atrapa a tus espectadores o convence a tu cliente creando una presentación con un contenido potente y un diseño atractivo.</p>
                 </div>
                 

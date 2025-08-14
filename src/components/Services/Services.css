@@ -175,7 +175,7 @@
 }
 
 .service-item--content strong {
-  color: var(--morado);
+  color: inherit;
 }
 
 .service-card {
