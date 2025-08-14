@@ -18,15 +18,12 @@ const Hero = () => {
       {/* Lado izquierdo - Morado */}
       <div className="hero-left">
         {/* Patrón de ondas */}
-        <div className="wave-pattern"></div>
+        <div className="wave-pattern "></div>
 
         {/* Contenido */}
         <div className="hero-content">
           <h1 className="hero-headline">
-            DESATA EL<br />
-            <span className="power">POWER</span>
-            DETRÁS<br />
-            DE TUS IDEAS
+            DESATA EL <span className="power">POWER</span> DETRÁS DE TUS IDEAS
           </h1>
           
           <p className="hero-description">
@@ -38,6 +35,8 @@ const Hero = () => {
           </button>
         </div>
       </div>
+      {/* Lado derecho - Naranja */}
+      <div className="hero-right">
         {/* Círculo de fondo */}
       <div className="circle-bg">
          {/* Iconos decorativos: bombillo y flecha (assets) */}
@@ -48,14 +47,7 @@ const Hero = () => {
         {/* Círculo pequeño */}
         <div className="circle-bg circle-bg-small"></div>
       </div>
-      {/* Lado derecho - Naranja */}
-      <div className="hero-right">
         
-        
-        
-        {/* <div className="person-image">
-          
-        </div> */}
       </div>
     </section>
   );
