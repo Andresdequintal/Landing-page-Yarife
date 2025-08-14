@@ -16,16 +16,12 @@ const About = () => {
             <span className="headline-line">
               CON <span className="white-text">PROPÓSITO</span>
             </span>
-          {/* Iconos de fondo grandes */}
+            {/* Iconos de fondo grandes */}
             <img src={iconBulb} alt="" className="bg-bulb" />
-          <img src={iconBriefcase} alt="" className="bg-briefcase" />
+            <img src={iconBriefcase} alt="" className="bg-briefcase" />
           </div>
+          <img className="about-person" src={personAbout} alt="Yarife Vallenilla" />
 
-          
-
-            <img className="about-person" src={personAbout} alt="Yarife Vallenilla" />
-          {/* <div className="about-person">
-          </div> */}
         </div>
 
         {/* Columna derecha */}
