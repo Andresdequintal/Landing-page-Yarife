@@ -40,27 +40,25 @@ const Contact = () => {
       <div className='container'>
         <h2 className='contact-headline'>Contáctame</h2>
         <div className='contact-container'>
-       <div className='contact-container__left'>
-       <div className='tag'>Quiero hablar con Yarife
-          <img src={arrow}/>
-        </div>
-       <div className='contacts'>
-       <div className='contact'>
-          <p>Correo</p>
-          <p>yarifepower@gmail.com</p>
-        </div>
-        <div className='contact'>
-          <p>Número de teléfono</p>
-          <p>+58 424 2429016</p>
-        </div>
-       </div>
-       </div>
-        <div className='decorator'>
-          
-          <div className='circle'>
+          <div className='contact-container__left'>
+            <div className='tag'>Quiero hablar con Yarife
+                <img src={arrow}/>
+              </div>
+            <div className='contacts'>
+              <div className='contact'>
+                  <p>Correo</p>
+                  <p>yarifepower@gmail.com</p>
+                </div>
+                <div className='contact'>
+                  <p>Número de teléfono</p>
+                  <p>+58 424 2429016</p>
+                </div>
+            </div>
           </div>
-          <img className="image" src={yarifeImage} alt="Yarife Vallenilla" />
-        </div>
+          <div className='decorator'>
+            <div className='circle'></div>
+            <img className="image" src={yarifeImage} alt="Yarife Vallenilla" />
+          </div>
         </div>
       </div>
 

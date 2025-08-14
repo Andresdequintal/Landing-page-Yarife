@@ -90,7 +90,7 @@ const Testimonials = () => {
       <div className="t-container">
         <div className="t-header">
           <h2 className="t-title">
-            <span className="t-bulb">💡</span>
+            {/* <span className="t-bulb">💡</span> */}
             Testimonios <span className="t-script">reales</span>
             <span className="t-hand">👆</span>
           </h2>

@@ -26,7 +26,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container flex-container">
+      <div className=" flex-container">
         <div className='left-side'>
           <img src={logo} alt='Yarife'/>
         </div>

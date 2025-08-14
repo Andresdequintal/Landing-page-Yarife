@@ -1,8 +1,8 @@
 
 
 .decorator {
-position: relative;
-/* overflow: hidden; */
+  position: relative;
+  display: flex;
 }
 
 .decorator .circle {
@@ -34,7 +34,7 @@ position: relative;
 .contact-headline {
   color: var(--morado-acento);
   font-weight: 800;
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 8vw, 5rem);
   line-height: 1.05;
   letter-spacing: -0.5px;
   margin-bottom: 8px;
@@ -47,7 +47,7 @@ position: relative;
   padding: 20px 36px;
   border-radius: 18px;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -69,11 +69,13 @@ position: relative;
   flex-direction: column;
   display: flex;
   gap: 10px;
+  padding: 15px 0;
 }
 
 .contact p{
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
 }
+
 .contact p:first-child{
   color: var(--morado);
   font-weight: 600;
@@ -89,4 +91,55 @@ position: relative;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+}
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+  .tag {
+    padding: 15px 23px;
+    border-radius: 10px;
+  }
+  .tag img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .tag img {
+    width: 100px;
+  }
+} 
+
+@media (max-width: 576px) {
+ 
+  .tag {
+    display: none;
+  }
+  .contact-container{
+    grid-template-columns: 1fr;
+  }
+  .decorator .circle {
+    right: 0;
+  }
+  .decorator .image {
+    width: 80%;
+    transform: scale(1.1);
+    margin-left: auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+ 
+  .decorator .image {
+    width: 100%;
+    transform: scale(1.1);
+  }
 }

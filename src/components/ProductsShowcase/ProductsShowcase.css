@@ -19,7 +19,7 @@
 
 .guaybo-title {
   color: var(--morado);
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 6vw, 3rem);;
   font-weight: 900;
   margin: 0 0 20px;
   text-transform: uppercase;
@@ -27,7 +27,7 @@
 
 .guaybo-sub {
   color: var(--morado);
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   line-height: 1.6;
   margin: 0 0 50px;
   max-width: 800px;
@@ -120,25 +120,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
   font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.canva-logo {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #00c4cc;
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 700;
   z-index: 2;
 }
 
@@ -161,7 +148,7 @@
 
 .card-title {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2.8vw, 1.3rem);
   font-weight: 600;
   line-height: 1.4;
   display: flex;
@@ -188,7 +175,7 @@
 
 .card-features {
   color: #fff;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2.2vw, 0.9rem);
   line-height: 1.5;
   margin: 0;
   text-align: start;
@@ -331,14 +318,6 @@
     gap: 30px;
   }
   
-  .guaybo-title {
-    font-size: 1.8rem;
-  }
-  
-  .guaybo-sub {
-    font-size: 1rem;
-  }
-  
   .guaybo-decor {
     width: 60px;
     height: 60px;
@@ -363,6 +342,10 @@
     bottom: 30px;
     right: 20px;
   }
+  .guaybo-section {
+    padding: 60px 0;
+  }
+
 }
 
 
