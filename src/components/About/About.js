@@ -1,5 +1,5 @@
 import React from 'react';
-import personAbout from '../../assets/images/Fotos profesionales/9.png';
+import personAbout from '../../assets/images/Fotos comprimidas Yarife/Segunda-foto.webp';
 import iconBulb from '../../assets/images/Iconos/Recurso 40.png';
 import iconBriefcase from '../../assets/images/Iconos/Recurso 41.png';
 import './About.css';

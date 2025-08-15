@@ -99,6 +99,7 @@
 .services-swiper .swiper-slide {
   height: auto;
   display: flex;
+  justify-content: center;
 }
 
 .services-swiper .swiper-button-next,

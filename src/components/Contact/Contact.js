@@ -1,5 +1,5 @@
 import React from 'react';
-import yarifeImage from '../../assets/images/Fotos profesionales/5.png';
+import yarifeImage from '../../assets/images/Fotos comprimidas Yarife/Tercera-foto.webp';
 import arrow from '../../assets/images/Iconos/Recurso 46.png';
 import './Contact.css';
 
