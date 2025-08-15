@@ -193,9 +193,12 @@
 }
 
 .service-card h3 {
-  color: var(--morado);
+  color: var(--morado-acento);
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif, bold;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .service-card .price {
@@ -219,7 +222,7 @@
 .service-card .bullets li { list-style: disc; }
 
 .service-cta {
-  background: var(--morado);
+  background: var(--morado-acento);
   color: var(--blanco);
   padding: 10px 20px;
   text-decoration: none;
