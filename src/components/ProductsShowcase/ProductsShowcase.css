@@ -1,19 +1,10 @@
 .guaybo-section {
   background: #fff;
-  padding: 0;
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
 
-.strategy-banner {
-  background: var(--morado);
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
 
 .guaybo-container {
   max-width: 1080px;
@@ -28,7 +19,7 @@
 
 .guaybo-title {
   color: var(--morado);
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 6vw, 3rem);;
   font-weight: 900;
   margin: 0 0 20px;
   text-transform: uppercase;
@@ -36,7 +27,7 @@
 
 .guaybo-sub {
   color: var(--morado);
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   line-height: 1.6;
   margin: 0 0 50px;
   max-width: 800px;
@@ -51,7 +42,7 @@
 
 .black-text {
   color: var(--black);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .purple-text {
@@ -65,6 +56,7 @@
   gap: 40px;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
 }
 
 .guaybo-card {
@@ -74,6 +66,15 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   border: 1px solid #e9ecef;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20px;
 }
 
 .guaybo-card.course {
@@ -91,17 +92,12 @@
   box-shadow: 0 16px 32px rgba(0,0,0,0.15);
 }
 
-.card-header {
-  margin-bottom: 20px;
-}
+
 
 .card-thumbnail {
   background: #e9ecef;
-  height: 120px;
+  aspect-ratio: 16/9;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   margin-bottom: 12px;
   overflow: hidden;
@@ -117,23 +113,21 @@
   transition: all 0.3s ease;
 }
 
-.youtube-thumbnail:hover {
-  transform: scale(1.02);
-  filter: brightness(1.1);
-}
-
-
-
-.canva-logo {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #00c4cc;
+.play-button {
+  background: #dc3545;
   color: #fff;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -155,20 +149,14 @@
 }
 
 .card-title {
-  color: var(--morado);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+  font-weight: 600;
   line-height: 1.4;
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.guaybo-card.course .card-title,
-.guaybo-card.ebook .card-title {
-  color: #fff;
-  font-weight: 900;
+  text-align: start;
 }
 
 .lightbulb-icon {
@@ -187,23 +175,19 @@
   color: #fff;
 }
 
-.card-features p {
-  color: #495057;
-  font-size: 0.9rem;
+.card-features {
+  color: #fff;
+  font-size: clamp(0.8rem, 2.2vw, 0.9rem);
   line-height: 1.5;
   margin: 0;
-}
-
-.guaybo-card.course .card-features p,
-.guaybo-card.ebook .card-features p {
-  color: #fff;
+  text-align: start;
 }
 
 .card-actions {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
 }
 
 .cta {
@@ -244,24 +228,24 @@
 }
 
 .guaybo-decor--top-left {
-  top: 40px;
-  left: 40px;
+  top: -30px;
+  left: -15px;
+  width: 90px;
+  height: auto;
+  transform: rotate(-15deg);
 }
 
 .guaybo-decor--top-right {
-  top: px;
-  right: 40px;
+  top: -10px;
+  right: -10px;
+  transform: translate(100%,-100%) rotate(10deg);
 }
 
 .guaybo-decor--bottom-left {
-  bottom: 40px;
-  left: 0px;
+  bottom: -10px;
+  left: -10px;
   width: 100px;
-  transform: rotate(10deg);
-
-
-
-
+  transform: translate(-100%,100%) rotate(190deg);
 }
 
 .guaybo-decor--bottom-right {
@@ -336,14 +320,6 @@
     gap: 30px;
   }
   
-  .guaybo-title {
-    font-size: 1.8rem;
-  }
-  
-  .guaybo-sub {
-    font-size: 1rem;
-  }
-  
   .guaybo-decor {
     width: 60px;
     height: 60px;
@@ -368,6 +344,10 @@
     bottom: 30px;
     right: 20px;
   }
+  .guaybo-section {
+    padding: 60px 0;
+  }
+
 }
 
 

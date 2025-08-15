@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Header.css';
 
-import logo from '../../assets/images/Logos/Recurso 38.png';
 import menuIcon from '../../assets/images/Iconos/menu_24dp_F2AD00_FILL0_wght400_GRAD0_opsz24.png';
+import logo from '../../assets/images/Logos/Recurso 38.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +40,7 @@ const Header = () => {
               Inicio
             </button>
             <button onClick={() => scrollToSection('sobre-mi')} className="nav-link">
-              Sobre Mí
+              Sobre mi
             </button>
             <button onClick={() => scrollToSection('servicios')} className="nav-link">
               Servicios

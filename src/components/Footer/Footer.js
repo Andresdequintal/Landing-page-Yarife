@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assets/images/Logos/Recurso 38.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -25,8 +26,11 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
-        <p>&copy; 2024 Yarife Vallenilla. Todos los derechos reservados.</p>
+      <div className="flex-container">
+        <div className='left-side'>
+          <img src={logo} alt='Yarife' />
+        </div>
+        <div className='right-side'>
         <div className="social-links">
           {socialLinks.map((social) => (
             <a 
@@ -39,6 +43,8 @@ const Footer = () => {
               <i className={social.icon}></i>
             </a>
           ))}
+        </div>
+        <p>&copy; 2024 Yarife Vallenilla. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

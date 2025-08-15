@@ -1,14 +1,16 @@
 import React from 'react';
+import './App.css';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import FAQ from './components/FAQ/FAQ';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Services from './components/Services/Services';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
 import ProductsShowcase from './components/ProductsShowcase/ProductsShowcase';
+import Services from './components/Services/Services';
+import ServicesDetails from './components/ServicesDetails/ServicesDetails';
+import StrategyBanner from './components/StrategyBanner/StrategyBanner';
 import Testimonials from './components/Testimonials/Testimonials';
-import FAQ from './components/FAQ/FAQ';
-import './App.css';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <StrategyBanner/>
+      <ServicesDetails/>
       <ProductsShowcase />
       <Testimonials />
       <FAQ />

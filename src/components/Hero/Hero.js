@@ -1,8 +1,8 @@
 import React from 'react';
-import './Hero.css';
 import yarifeImage from '../../assets/images/Fotos profesionales/1.png';
 import iconBulb from '../../assets/images/Iconos/Recurso 40.png';
 import iconArrow from '../../assets/images/Iconos/Recurso 46.png';
+import './Hero.css';
 
 const Hero = () => {
   const openWhatsApp = () => {
@@ -13,22 +13,17 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="hero">
-      {/* Iconos decorativos: bombillo y flecha (assets) */}
-      <img src={iconBulb} alt="" className="hero-icon lightbulb-icon" />
-      <img src={iconArrow} alt="" className="hero-icon arrow-icon" />
+     
 
       {/* Lado izquierdo - Morado */}
       <div className="hero-left">
         {/* Patrón de ondas */}
-        <div className="wave-pattern"></div>
+        <div className="wave-pattern "></div>
 
         {/* Contenido */}
         <div className="hero-content">
           <h1 className="hero-headline">
-            DESATA EL<br />
-            <span className="power">POWER</span><br />
-            DETRÁS<br />
-            DE TUS IDEAS
+            DESATA EL <span className="power">POWER</span> DETRÁS DE TUS IDEAS
           </h1>
           
           <p className="hero-description">
@@ -40,16 +35,19 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      
       {/* Lado derecho - Naranja */}
       <div className="hero-right">
         {/* Círculo de fondo */}
-        <div className="circle-bg"></div>
-        
+      <div className="circle-bg">
+         {/* Iconos decorativos: bombillo y flecha (assets) */}
+        <img src={iconBulb} alt="" className="hero-icon lightbulb-icon" />
+        <img src={iconArrow} alt="" className="hero-icon arrow-icon" />
         {/* Imagen de la persona */}
-        <div className="person-image">
-          <img src={yarifeImage} alt="Yarife Vallenilla" />
-        </div>
+        <img className="person-image" src={yarifeImage} alt="Yarife Vallenilla" />
+        {/* Círculo pequeño */}
+        <div className="circle-bg circle-bg-small"></div>
+      </div>
+        
       </div>
     </section>
   );
