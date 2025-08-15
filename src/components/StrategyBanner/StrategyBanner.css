@@ -1,0 +1,13 @@
+.strategy-banner {
+    background: var(--morado);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    letter-spacing: 0.5px;
+  }
+  
+.strategy-banner-accent {
+    color: var(--accent);
+}

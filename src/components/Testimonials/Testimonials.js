@@ -20,7 +20,7 @@ const Testimonials = () => {
       {
         id: 2,
         name: 'Elena Paula',
-        subtitle: 'Yasmin Ruiz - Fundadora de Sembrando huellas Venezuela',
+        subtitle: 'Yasmin Ruiz - Fundadora de Sembrando Huellas Venezuela',
         quote: 'Gracias por ser tan espléndida al compartir tu experticia. El país necesita profesionales como tú que buscan la excelencia.',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
       }
@@ -90,7 +90,7 @@ const Testimonials = () => {
       <div className="t-container">
         <div className="t-header">
           <h2 className="t-title">
-            <span className="t-bulb">💡</span>
+            {/* <span className="t-bulb">💡</span> */}
             Testimonios <span className="t-script">reales</span>
             <span className="t-hand">👆</span>
           </h2>

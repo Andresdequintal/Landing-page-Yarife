@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import './FAQ.css';
-import logoYarife from '../../assets/images/Logos/Recurso 38.png';
 import icon1 from '../../assets/images/Iconos/Recurso 40.png';
 import icon2 from '../../assets/images/Iconos/Recurso 42.png';
 import icon3 from '../../assets/images/Iconos/Recurso 50.png';
@@ -10,7 +8,8 @@ import icon6 from '../../assets/images/Iconos/Recurso 69.png';
 import icon7 from '../../assets/images/Iconos/Recurso 70.png';
 import icon8 from '../../assets/images/Iconos/Recurso 71.png';
 import icon9 from '../../assets/images/Iconos/Recurso 72.png';
-import icon10 from '../../assets/images/Iconos/Recurso 73.png';
+import logoYarife from '../../assets/images/Logos/Recurso 38.png';
+import './FAQ.css';
 
 const FAQ = () => {
   const [openQuestions, setOpenQuestions] = useState([]);
@@ -25,8 +24,8 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "CUALES SON LOS BENEFICIOS DE TIS SERVICIOS?",
-      answer: "Sí, te ayudo desde la idea hasta el lanzamiento"
+      question: "¿PUEDO TRABAJAR CONTIGO SI AÚN NO TENGO UN CURSO O MATERIAL CREADO?",
+      answer: "Sí. Te ayudo desde la idea hasta el lanzamiento. No necesitas todo claro, ¡justo para eso estoy!"
     },
     {
       question: "¿DISEÑAS LOGOS O MARCAS PARA NEGOCIOS FÍSICOS?",
@@ -54,6 +53,9 @@ const FAQ = () => {
             <div className="faq-title-banner faq-title-banner--yellow">
               <span className="faq-title-main">FRECUENTES</span>
             </div>
+            <img src={icon1} alt="" className="faq-decor-icon faq-decor-icon--1" />
+            <div className="faq-decor-icon faq-quote-icon">"</div>
+
           </div>
           <div className="faq-brand">
             <div className="faq-speech-bubble">
@@ -67,15 +69,9 @@ const FAQ = () => {
           </div>
         </div>
 
-        {/* Elementos decorativos principales */}
-        <div className="faq-decor">
-          <div className="faq-quote-icon">"</div>
-          <div className="faq-arrow-icon">✓</div>
-        </div>
-
         {/* Elementos decorativos adicionales con iconos */}
         <div className="faq-decor-icons">
-          <img src={icon1} alt="" className="faq-decor-icon faq-decor-icon--1" />
+          
           <img src={icon2} alt="" className="faq-decor-icon faq-decor-icon--2" />
           <img src={icon3} alt="" className="faq-decor-icon faq-decor-icon--3" />
           <img src={icon4} alt="" className="faq-decor-icon faq-decor-icon--4" />
@@ -84,7 +80,11 @@ const FAQ = () => {
           <img src={icon7} alt="" className="faq-decor-icon faq-decor-icon--7" />
           <img src={icon8} alt="" className="faq-decor-icon faq-decor-icon--8" />
           <img src={icon9} alt="" className="faq-decor-icon faq-decor-icon--9" />
-          <img src={icon10} alt="" className="faq-decor-icon faq-decor-icon--10" />
+          {/* <img src={icon10} alt="" className="faq-decor-icon faq-decor-icon--10" /> */}
+           <div className="faq-decor-square"></div>
+          <div className="circle-decor"></div>
+          <div className="circle-decor--2"></div>
+          <div className="faq-arrow-icon">✓</div>
         </div>
 
         {/* Preguntas y respuestas */}
@@ -109,11 +109,7 @@ const FAQ = () => {
           ))}
         </div>
 
-        {/* Elementos decorativos adicionales */}
-        <div className="faq-decor-elements">
-          <div className="faq-decor-square"></div>
-          <div className="faq-decor-hand"></div>
-        </div>
+       
       </div>
     </section>
   );

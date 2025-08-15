@@ -1,9 +1,9 @@
 .about-section {
   background: linear-gradient(90deg, #a86df4 0%, #d6a3fb 100%);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: stretch;
-  padding: 80px 0; /* espacio bajo el header fijo */
+  /* padding: 80px 0; espacio bajo el header fijo */
 }
 
 .about-grid {
@@ -12,7 +12,7 @@
   gap: 40px;
   width: 100%;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
   padding: 0 40px;
 }
 
@@ -21,16 +21,19 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-direction: column;
   padding-top: 0;
 }
 
 .headline {
   color: var(--morado-acento);
   font-weight: 900;
-  font-size: 3.6rem;
+  font-size: clamp(2rem, 5vw, 3.6rem);
   line-height: 1.05;
   letter-spacing: -0.5px;
   margin-bottom: 8px;
+  position: relative; 
+  transform: translateY(35px);
 }
 
 .headline-line { display: block; }
@@ -50,36 +53,31 @@
 .bg-bulb {
   position: absolute;
   left: 70px;
-  top: 200px;
-  width: 120px;
+  bottom: 0;
+  width: 100px;
   opacity: 1;
   z-index: 1;
+  transform: translateY(120%) rotate(-25deg);
 }
 
 .bg-briefcase {
   position: absolute;
-  left: 470px;
-  bottom: 400px;
-  width: 110px;
+  right: 0;
+  bottom: 50%;
+  width: 100px;
   opacity: 1;
   z-index: 1;
+  transform: translateX(100%) rotate(25deg);
 }
 
-.about-person {
-  position: absolute;
-  left: 140px;
-  bottom: -87px;
-  width: 420px;
-  max-width: 90%;
-  z-index: 2;
-}
 
-.about-person img { width: 100%; height: auto; object-fit: contain; }
+.about-person { height: 600px; margin-top: -20px; z-index: 2; align-self: center; object-fit: contain; }
 
-.about-right { color: #ffffff; padding: 20px 20px 20px 0; }
+.about-right { color: #ffffff; padding: 20px; margin: auto; }
 
 .quote {
   font-size: 1.7rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   font-weight: 700;
   line-height: 1.3;
   margin: 10px 0 24px;
@@ -87,36 +85,55 @@
 }
 
 .about-paragraph {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
-.accent { color: var(--morado-acento); }
+.accent { 
+  color: var(--morado-acento) !important; 
+}
 
 .about-list { margin-top: 24px; display: grid; gap: 16px; }
 
-.about-list-item { display: flex; align-items: center; gap: 12px; font-size: 1.05rem; }
+.about-list-item {  display: flex; align-items: center; gap: 12px; font-size: clamp(1rem, 1.2vw, 1.2rem); }
 
-.about-list-icon { color: #ffffff; font-size: 1.15rem; }
+.about-list-icon {  font-size: 1.4rem; }
+
 
 /* Responsive */
 @media (max-width: 1200px) {
-  .headline { font-size: 2.8rem; }
-  .about-person { width: 380px; }
+  .about-person {
+    height: 500px;
+  }
+  .bg-bulb,.bg-briefcase {
+    width: 80px;
+  }
+  .about-right {
+    padding:  0 0 50px 0;
+  }
 }
 
 @media (max-width: 992px) {
   .about-grid { grid-template-columns: 1fr; gap: 20px; }
-  .about-left { min-height: 520px; }
-  .about-person { left: 40px; width: 360px; bottom: -20px; }
+  .about-person {
+    height: 600px;
+  }
+  .about-person { height: 500px; margin-top: -100px; z-index: 2; align-self: flex-end; object-fit: contain; }
+
+    
+}
+
+@media (max-width: 768px) {
+  .about-person { height: 400px; margin-top: 0; }
+
+  
 }
 
 @media (max-width: 576px) {
-  .about-section { padding: 60px 0; }
+  .about-person { height: 400px; margin-top: 0; }
   .about-grid { padding: 0 20px; }
-  .headline { font-size: 2.1rem; }
-  .about-person { left: 20px; width: 300px; bottom: 0; }
-  .quote { font-size: 1.3rem; }
-  .about-paragraph { font-size: 1rem; }
+  .bg-bulb,.bg-briefcase {
+    width: 60px;
+  }
 }

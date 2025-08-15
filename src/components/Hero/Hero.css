@@ -1,20 +1,21 @@
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   position: relative;
   background: var(--morado);
   padding-top: 84px; /* evitar que el header fijo tape el hero */
   align-items: stretch;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .hero-left {
   width: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 clamp(1.5rem, 4vw, 4rem);
+  justify-content: start;
+  padding: 100px clamp(1.5rem, 4vw, 4rem);
   position: relative;
-  overflow: hidden;
 }
 
 .hero-right {
@@ -23,7 +24,6 @@
   align-items: flex-end;
   justify-content: center;
   position: relative;
-  overflow: hidden;
 }
 
 /* Wave patterns */
@@ -31,11 +31,11 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 50vw;
   height: 220px;
   background: var(--lila);
-  border-top-left-radius: 1000px 220px;
-  border-top-right-radius: 1000px 220px;
+  border-top-left-radius: 100px 220px;
+  border-top-right-radius: 1000px 281px;
   opacity: 0.25;
 }
 
@@ -50,17 +50,20 @@
   font-size: clamp(2.4rem, 6vw, 4.6rem);
   font-weight: 900;
   line-height: 1.08;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.5px;
+  max-width: 100%;
 }
+
 
 .hero-headline .power {
   color: var(--rojo);
   font-size: clamp(2.8rem, 7vw, 5.4rem);
+  margin-right: 10px;
 }
 
 .hero-description {
-  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   margin-bottom: 2.2rem;
   max-width: 560px;
 }
@@ -87,76 +90,170 @@
 /* Icons */
 .hero-icon {
   position: absolute;
-  width: 90px;
+  width: clamp(4rem,7vw,10rem);
   height: auto;
 }
 
 /* Posición exacta del bombillo según X/Y de referencia (aprox. X: 653.4px, Y: 660.4px en un lienzo grande).
    Lo trasladamos a porcentajes para que sea responsive, calibrado visualmente para desktop 1440px. */
 .lightbulb-icon {
-  top: 20.5%;
-  left: 53.2%;
+  top: -10%;
+  left: 0%;
+  transform: rotate(-25deg);
 }
 
 /* Flecha con rotación y posición inspirada en los valores (ancho/alto/rotar) de la captura */
 .arrow-icon {
-  bottom: 26%;
-  left: 48.5%;
-  width: 140px;
-  transform: rotate(-37deg);
+  bottom: 45%;
+  left: -20%;
+  width: 9vw;
+  transform: rotate(-60deg);
 }
 
 /* Person Image */
 .person-image {
   position: absolute;
-  right: 8%;
+  left: 0%;
   bottom: 0;
-  width: 440px;
-  max-width: 88%;
   z-index: 2;
-}
-
-.person-image img {
-  width: 100%;
-  height: auto;
+  height: 118%;
   object-fit: contain;
 }
 
 .circle-bg {
   position: absolute;
-  width: 760px;
-  height: 760px;
+  width: 100%;
+  aspect-ratio: 1/1;
   background: var(--rojo);
   border-radius: 50%;
-  top: 12%;
-  right: -220px;
+  bottom: -15%;
+  right: -1%;
   opacity: 1;
   z-index: 1;
 }
 
+.circle-bg-small {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -6%;
+  right: 12%;
+}
+
+
 /* Responsive */
 @media (max-width: 1200px) {
-  .person-image { width: 400px; right: 6%; }
-  .circle-bg { width: 680px; height: 680px; right: -200px; }
+  .hero {
+    min-height:fit-content
+  }
+  .hero-headline {
+    font-size: clamp(2.4rem, 5vw, 4.6rem);
+    /* color: red !important; */
+
+  }
+  .hero-left {
+    padding: 80px clamp(1.5rem, 4vw, 4rem);
+  }
+  .hero-headline .power {
+    font-size: clamp(1rem, 6.5vw, 5.4rem);
+  }
+  .circle-bg:not(.circle-bg-small) {
+    width: 110%;
+  }
+  .circle-bg-small {
+    top: -10%;
+  }
+  .arrow-icon {
+    bottom: 30%
+  }
+  
 }
 
 @media (max-width: 992px) {
-  .hero { flex-direction: column; padding-top: 72px; }
-  .hero-left, .hero-right { width: 100%; }
-  .hero-left { padding: 0 2rem; }
-  .hero-headline { font-size: clamp(2rem, 6vw, 3rem); }
-  .hero-headline .power { font-size: clamp(2.3rem, 7vw, 3.6rem); }
-  .hero-description { font-size: 1.1rem; max-width: 100%; }
-  .person-image { position: relative; right: auto; margin: 0 auto; width: 380px; }
-  .circle-bg { width: 620px; height: 620px; right: -180px; top: -60px; opacity: 0.95; }
+
+  .hero-headline {
+    font-size: clamp(1.8rem, 5vw, 4.6rem);
+    /* color: black !important; */
+  }
+  .hero-left {
+    width: 60%;
+  }
+  .hero-right {
+    width: 40%;
+
+  }
+  .circle-bg:not(.circle-bg-small) {
+    width: 115%;
+  }
+  .circle-bg-small {
+    top: -15%;
+    width: 70px;
+    height: 70px;
+  }
+  .lightbulb-icon {
+    left: 10%;
+  }
+  .wave-pattern {
+    height: 160px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+  }
+  .hero-right {
+    height: 60vh;
+  }
+  .hero-right .circle-bg:not(.circle-bg-small) {
+    height: 100%;
+    width: auto;
+    max-width: 110%;
+    object-fit: contain;
+  }
+  .hero-left {
+    padding: 40px clamp(1.5rem, 4vw, 4rem);
+  }
+  .hero-icon {
+    width: clamp(3rem,10vw,10rem);
+  }
+  .arrow-icon  {
+    width: 6rem;
+  }
+  .hero-headline .power {
+
+  }
+  .wave-pattern {
+    width: 220px;
+    height: 220px;
+    border-top-left-radius: 100px 70%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 25%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(40%);
+  }
+  
 }
 
 @media (max-width: 576px) {
-  .hero-headline { font-size: 2.1rem; }
-  .hero-headline .power { font-size: 2.6rem; }
-  .cta-button { width: 100%; text-align: center; }
-  .person-image { width: 300px; }
-  .circle-bg { width: 520px; height: 520px; right: -160px; top: -40px; }
-  .hero-icon { display: none; }
-  .wave-pattern { height: 160px; }
+  .cta-button {
+    width: 100%;
+  }
+  .wave-pattern  {
+    opacity: 0;
+  }
+  .circle-bg:not(.circle-bg-small) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .circle-bg-small {
+    width: 60px;
+    height: 60px;
+  }
 }
