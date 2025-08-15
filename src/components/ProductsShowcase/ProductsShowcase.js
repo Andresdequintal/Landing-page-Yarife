@@ -20,7 +20,7 @@ const ProductsShowcase = () => {
         
 
         <div className="guaybo-content">
-          <h2 className="guaybo-title">APRENDE CON <span className="black-text">YARIFE en GUAYBO</span></h2>
+          <h2 className="guaybo-title">APRENDE CON <span className="black-text">YARIFE</span></h2>
           <p className="guaybo-sub">
             LIBERA TU POTENCIAL <span className="accent">CREATIVO</span> CON MI <span className="purple-text">CURSO COMPLETO</span> Y <span className="purple-text">EBOOK</span> PARA LLEVAR TUS PRESENTACIONES A OTRO NIVEL
           </p>
